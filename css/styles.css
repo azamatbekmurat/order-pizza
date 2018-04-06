@@ -4,8 +4,12 @@
 }
 
 #order-pizza {
-  margin-top: 45px;
+  margin-top: 25px;
   margin-bottom: 30px;
+}
+
+#address {
+  margin-top: 25px;
 }
 
 .ordered-pizza {

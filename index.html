@@ -41,22 +41,36 @@
               </br>
               <input type="checkbox" name="topping" value="onions">
               <label class="toppings">Onions</label>
-              <small id="toppingPrice" class="form-text text-muted">Each topping will add extra 5$</small>
+              <small id="toppingPrice" class="form-text text-muted"><em>Each topping will be extra 5$</em></small>
               <br>
 
             <h5>Select size of your pizza</h5>
               <select id="size-of-pizza">
-                <option value="small">Small: 10$</option>
-                <option value="medium">Medium: 15$</option>
-                <option value="large">Large: 20$</option>
-                <option value="extra-large">Extra-Large: 25$</option>
+                <option value="Small">Small: 10$</option>
+                <option value="Medium">Medium: 15$</option>
+                <option value="Large">Large: 20$</option>
+                <option value="Extra-large">Extra-Large: 25$</option>
               </select>
               </br>
+            <div id="address">
+              <h5>Please enter your address</h5>
+              <div class="form-group">
+                <label for="street">Street</label>
+                <input type="text" class="form-control street" placeholder="Enter your address">
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control city" placeholder="Enter your city">
+              </div>
+              <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control state" placeholder="Enter your state">
+              </div>
+            </div>
 
-              <button type="submit" class="btn btn-primary btn-lg" id="order-pizza">Order Pizza!</button>
+            <button type="submit" class="btn btn-primary btn-lg" id="order-pizza">Order Pizza!</button>
 
           </form>
-
 
           <h5>Ordered Pizza:</h5>
           <ul id="ordered-pizza-list">
