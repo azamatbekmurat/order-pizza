@@ -10,9 +10,72 @@
   </head>
   <body>
     <div class="container">
-      <h1>Order Pizza</h1>
+      <div class="jumborton">
+        <h1>Order a Pizza</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p>Welcome to our pizza restaurant. Here you can create your own pizza according to your your preferences and order your pizza online.</p>
+          <form id="pizzaOrder">
+            <h5>Create your own pizza</h5>
+            <label for="label">Name your pizza before starting to create:</label>
+            <input id="pizzaName" class="form-control" type="text" name="pizza Name"></input>
+            </br>
+
+            <h5>Select Toppings for your pizza</h5>
+              <input type="checkbox" name="topping" value="cheese">
+              <label class="toppings">Cheese</label>
+              </br>
+              <input type="checkbox" name="topping" value="pepperoni">
+              <label class="toppings">Pepperoni</label>
+              </br>
+              <input type="checkbox" name="topping" value="artichoke">
+              <label class="toppings">Artichoke</label>
+              </br>
+              <input type="checkbox" name="topping" value="anchovy">
+              <label class="toppings">Anchovy</label>
+              </br>
+              <input type="checkbox" name="topping" value="mushrooms">
+              <label class="toppings">Mushrooms</label>
+              </br>
+              <input type="checkbox" name="topping" value="onions">
+              <label class="toppings">Onions</label>
+              <small id="toppingPrice" class="form-text text-muted">Each topping will add extra 5$</small>
+              <br>
+
+            <h5>Select size of your pizza</h5>
+              <select id="size-of-pizza">
+                <option value="small">Small: 10$</option>
+                <option value="medium">Medium: 15$</option>
+                <option value="large">Large: 20$</option>
+                <option value="extra-large">Extra-Large: 25$</option>
+              </select>
+              </br>
+
+              <button type="submit" class="btn btn-primary btn-lg" id="order-pizza">Order Pizza!</button>
+
+          </form>
+
+
+          <h5>Ordered Pizza:</h5>
+          <ul id="ordered-pizza-list">
+          </ul>
+
+        </div>
+      </div>
+      <!-- End of Row -->
+
+      <div class="row">
+        <div class="col-md-6" id="result">
+          <h3>Pizza Details:</h3>
+        </div>
+
+      </div>
+      <!-- End of Row -->
+
 
     </div>
-
+    <!-- End of Container -->
   </body>
 </html>

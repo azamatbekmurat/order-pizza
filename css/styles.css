@@ -1,0 +1,18 @@
+#result {
+  margin-top: 45px;
+  display: none;
+}
+
+#order-pizza {
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.ordered-pizza {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.ordered-pizza:hover {
+  text-decoration: underline;
+}
