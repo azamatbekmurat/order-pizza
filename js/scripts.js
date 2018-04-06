@@ -25,13 +25,13 @@ Address.prototype.fullAddress = function() {
 }
 
 Pizza.prototype.getPrice = function() {
-  if (this.pizzaSize==="small") {
+  if (this.pizzaSize==="Small") {
     pizzaPrice = 10 + (this.pizzaToppingNumber*5);
-  } else if (this.pizzaSize==="medium") {
+  } else if (this.pizzaSize==="Medium") {
     pizzaPrice = 15 + (this.pizzaToppingNumber*5);
-  } else if (this.pizzaSize==="large") {
+  } else if (this.pizzaSize==="Large") {
     pizzaPrice = 20 + (this.pizzaToppingNumber*5);
-  } else if (this.pizzaSize==="extra-large") {
+  } else if (this.pizzaSize==="Extra-large") {
     pizzaPrice = 25 + (this.pizzaToppingNumber*5);
   } else {}
   return pizzaPrice;
@@ -71,10 +71,16 @@ $(document).ready(function() {
     var newAddress = new Address(inputStreet, inputCity, inputState);
     newPizza.pizzaAddress.push(newAddress);
 
-    console.log(newAddress);
-    console.log(newPizza);
+    $("ul#ordered-pizza-list").append("<li><span class='ordered-pizza'>" + newPizza.PizzaName() + ", " + calculatedPizzaPrice + "$" + "</span></li>");
 
-    $("ul#ordered-pizza-list").append("<li><span class='ordered-pizza'>" + newPizza.PizzaName() + "</span></li>");
+    $(".ordered-pizza").last().click(function() {
+      $("#pizza-details").show();
+      $("#pizza-details h6").text(newPizza.PizzaName());
+      $(".order-details").text(newPizza.PizzaName() + " with " + (newPizza.pizzaToppingsList).join(", "));
+      $(".pizza-price").text(calculatedPizzaPrice);
+      $(".delivery-address").text(newAddress.fullAddress());
+    });
+
 
     resetFields();
 
