@@ -6,10 +6,10 @@
 
 ## Description
 A webpage where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost:
-* Program calculates pizza price according the number of toppings (price of topping is 5$) and size of pizza:
-  * Example Input: one topping like "pepperoni" and small size
+* Program calculates pizza price according to the number of toppings (price of topping is 5$) and size of pizza:
+  * Example Input: small size with one topping like "pepperoni"
   * Example Output: price will be: 10$ for small size + 5$ for one topping.
-  * Example Input: two toppings like "pepperoni", "onions" and medium size
+  * Example Input: medium size with two toppings like "pepperoni", "onions"
   * Example Output: price will be: 15$ for medium size + 10$ for two toppings.
 
 ## Setup/Installation Requirements
