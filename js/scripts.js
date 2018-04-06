@@ -1,5 +1,4 @@
-
-
+//business logic
 pizzaPrice = 0;
 
 function Pizza(name, numberOfToppings, size, toppingsList) {
@@ -39,7 +38,7 @@ Pizza.prototype.getPrice = function() {
 
 function resetFields() {
     $("input#pizzaName").val("");
-    $("#size-of-pizza").val("small");
+    $("#size-of-pizza").val("Small");
     $('input[type=checkbox]').each(function() {
         this.checked = false;
     });
@@ -48,6 +47,7 @@ function resetFields() {
     $("input.state").val("");
 }
 
+//user interface logic
 $(document).ready(function() {
   $("#pizzaOrder").submit(function(event) {
     event.preventDefault();
@@ -71,7 +71,7 @@ $(document).ready(function() {
     var newAddress = new Address(inputStreet, inputCity, inputState);
     newPizza.pizzaAddress.push(newAddress);
 
-    $("ul#ordered-pizza-list").append("<li><span class='ordered-pizza'>" + newPizza.PizzaName() + ", " + calculatedPizzaPrice + "$" + "</span></li>");
+    $("ul#ordered-pizza-list").append("<li><span class='ordered-pizza'>" + newPizza.PizzaName() + ", " + calculatedPizzaPrice + "$." + "</span></li>");
 
     $(".ordered-pizza").last().click(function() {
       $("#pizza-details").show();
@@ -80,7 +80,6 @@ $(document).ready(function() {
       $(".pizza-price").text(calculatedPizzaPrice);
       $(".delivery-address").text(newAddress.fullAddress());
     });
-
 
     resetFields();
 

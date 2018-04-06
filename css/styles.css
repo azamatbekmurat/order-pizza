@@ -1,6 +1,19 @@
 #pizza-details {
-  margin-top: 45px;
   display: none;
+}
+
+#pizza-details h3 {
+  text-decoration: underline;
+  text-decoration-style:double;
+  color: blue;
+  margin-bottom: 45px;
+}
+
+#pizza-details h6 {
+  font-weight: bolder;
+  font-size: 22px;
+  color: #217787;
+  font-style: italic;
 }
 
 #order-pizza {
@@ -19,4 +32,12 @@
 
 .ordered-pizza:hover {
   text-decoration: underline;
+}
+
+.image {
+  max-width: 290px;
+  max-height: 295px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
